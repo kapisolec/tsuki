@@ -1,0 +1,150 @@
+.app {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  gap: 10%;
+}
+
+.app-header {
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  gap: 25px;
+  z-index: 1;
+  background: none;
+}
+
+.app-wallet {
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.41, 0.79, 0, 0.96);
+
+  &:hover {
+    fill: rgb(180, 0, 69);
+    filter: unset;
+  }
+}
+
+.app-uniswap {
+  width: 68px;
+  height: 68px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.41, 0.79, 0, 0.96);
+  fill: #fff;
+
+  &:hover {
+    fill: rgb(180, 0, 69);
+    filter: unset;
+  }
+}
+
+.app-dextools {
+  width: 140px;
+  max-height: 68px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.41, 0.79, 0, 0.96);
+  fill: #fff;
+
+  &:hover {
+    fill: rgb(180, 0, 69);
+    filter: unset;
+  }
+}
+
+.app-content {
+  backdrop-filter: blur(4px);
+  background-color: #ffb0ce4b;
+  z-index: 1;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.svg-wrapper {
+  cursor: pointer;
+  position: relative;
+
+  .moon-svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  .moon-satelite {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.5, 0.8, 0.5, 0.2);
+    position: absolute;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    animation-name: spin;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.app-cherry {
+  position: absolute;
+  opacity: 50%;
+  z-index: -1;
+
+  &.right {
+    transform: scale(0.4) rotate(80deg);
+    right: 0;
+    top: 0;
+
+    &.top {
+      top: -364px;
+      right: -455px;
+    }
+  }
+
+  &.left {
+    transform: scale(0.5) rotate(160deg) scaleY(-1);
+
+    &.top {
+      top: -200px;
+      left: -215px;
+    }
+  }
+}
+
+.app-content-main_container {
+  filter: brightness(0.9);
+  box-shadow: 3px 3px 16px -7px rgba(90, 80, 66, 1);
+  width: 500px;
+  height: 600px;
+  max-height: 80vh;
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid #ffb0ce65;
+
+  .content-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+  }
+
+  .content-tasks {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+  }
+}

@@ -1,0 +1,56 @@
+.task-container {
+  width: 90%;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #d7faff9f;
+  padding: 10px;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 3px 3px 16px -7px rgba(90, 80, 66, 1);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    .task-icon {
+      fill: rgb(216, 0, 83);
+    }
+  }
+}
+
+.task-icon {
+  transition: all 0.15s ease-out;
+}
+
+.frame-container {
+  position: absolute;
+  z-index: 100;
+  top: 40%;
+  left: 50%;
+  overflow-y: hidden;
+  width: 550px;
+  height: 550px;
+  background-color: #d7faff9f;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 15px;
+  border: 1px solid #d7faffc7;
+}
+
+.frame-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 3px 5px;
+  background-color: rgba(0, 104, 165, 0.253);
+  cursor: grab;
+}
+
+.frame-content {
+  padding: 5px 10px;
+}
+
+.frame-exit {
+  cursor: pointer;
+}
