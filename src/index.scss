@@ -1,7 +1,7 @@
 body {
   flex: 1;
   margin: 0;
-  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  font-family: CatCafe, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,6 +9,7 @@ body {
   background-size: cover;
   position: relative;
   overflow-y: hidden;
+  letter-spacing: 1px;
 }
 
 code {
@@ -22,8 +23,8 @@ code {
 }
 
 @font-face {
-  font-family: "RomajiMincho";
-  src: local("RomajiMincho"), url(./fonts/RomajiMincho.otf) format("opentype");
+  font-family: "CatCafe";
+  src: local("CatCafe"), url(./fonts/CatCafe.ttf) format("opentype");
 }
 
 $mainColor: #efe9db;
