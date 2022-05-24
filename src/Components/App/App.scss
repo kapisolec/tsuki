@@ -109,11 +109,9 @@
   }
 
   .content-tasks {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 90%;
+    overflow-y: auto;
+    max-height: 87%;
   }
 }
 

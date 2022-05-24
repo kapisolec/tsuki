@@ -10,8 +10,8 @@ import axios from "axios";
 function HtmlFrame(props) {
   const { setshowFrame, wallet = "" } = props;
   const [tokenData, setTokenData] = useState({});
-  const token = "0x517AB044bda9629E785657DbbCae95C40C8f452C";
-  const nativeToken = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+  const token = "0x251457b7c5d85251Ca1aB384361c821330bE2520";
+  const nativeToken = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
 
   const nodeRef = useRef(null);
   const dollarUS = Intl.NumberFormat("en-US", {
@@ -40,8 +40,19 @@ function HtmlFrame(props) {
             nativeToken,
           },
         });
+        const userInfo = await axios.post(
+          "https://cockper.site/get-user-info",
+          {
+            token: token,
+            wallet: wallet,
+          }
+        );
 
-        setTokenData({ ...tradingVolume.data, ...tokenInfo.data });
+        setTokenData({
+          ...tradingVolume.data,
+          ...tokenInfo.data,
+          ...userInfo.data,
+        });
       } catch (error) {
         console.log(error);
       }
@@ -132,16 +143,20 @@ function HtmlFrame(props) {
               <div className="frame-grid-el portfolio">
                 <span className="title">Value of your tokens:</span>
                 <span className="content">
-                  {dollarUS.format(tokenData.marketCap || 0)}
+                  {dollarUS.format(tokenData.valueOfToken || 0)}
                 </span>
               </div>
               <div className="frame-grid-el holdings">
                 <span className="title">You have:</span>
-                <span className="content">$300 TSUKI</span>
+                <span className="content">
+                  {tokenData.balanceOfToken?.toFixed(2) || 0} $TSUKI
+                </span>
               </div>
               <div className="frame-grid-el tasks">
-                <span className="title">Done tasks:</span>
-                <span className="content">4/4</span>
+                <span className="title">Your supply share:</span>
+                <span className="content">
+                  {tokenData.percentageOfSupply?.toFixed(2) || 0}%
+                </span>
               </div>
             </div>
           </div>

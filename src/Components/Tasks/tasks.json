@@ -25,8 +25,26 @@
     },
     {
         "name":"task5",
-        "description":"Visit us on CMC, CG and Dextools for algorithm! Post about os and our newest updates, don't forget to @tsukidao!",
-        "website":["https://coinmarketcap.com/", "https://coingecko.com/", "https://www.dextools.io/app/ether/pair-explorer/0xf4f0bad0583507ee9a6a027604a7eea843a3e745"],
+        "description":"Visit us on CMC for algorithm",
+        "website":"https://coinmarketcap.com/",
+        "action":"upvote"
+    },
+    {
+        "name":"task6",
+        "description":"Visit us on CG for algorithm",
+        "website":"https://coingecko.com/",
+        "action":"upvote"
+    },
+    {
+        "name":"task7",
+        "description":"Visit us on Dextools for algorithm",
+        "website":"https://www.dextools.io/app/ether/pair-explorer/0xf4f0bad0583507ee9a6a027604a7eea843a3e745",
+        "action":"upvote"
+    },
+    {
+        "name":"task8",
+        "description":"Post about us and our newest updates, don't forget to @tsukidao!",
+        "website":"https://twitter.com",
         "action":"tweet"
     }
 ]
